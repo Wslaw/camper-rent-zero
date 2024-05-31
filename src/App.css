@@ -1,0 +1,14 @@
+body{
+    background-color: #355678;
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 25px;
+    margin: 0 16px;
+    align-items: baseline;
+    color: #347800;
+    background-color: #33aacc;
+}

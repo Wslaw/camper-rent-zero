@@ -1,0 +1,15 @@
+.campers-list{
+    margin: 20px 0;
+    list-style: none;
+}
+
+.campers-list-items{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(82, 82, 142);
+    width: 250px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: rgb(221, 239, 239);
+}
