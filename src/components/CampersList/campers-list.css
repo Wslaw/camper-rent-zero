@@ -5,11 +5,18 @@
 
 .campers-list-items{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     color: rgb(82, 82, 142);
-    width: 250px;
+    width: 450px;
     padding: 10px 20px;
     border-radius: 5px;
     margin-bottom: 5px;
     background-color: rgb(221, 239, 239);
+}
+
+img{
+    width: 90px;
+    height: auto;
+    align-items: center;
 }
