@@ -5,6 +5,8 @@
 
 .campersListItems{
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     color: rgb(82, 82, 142);
@@ -16,7 +18,8 @@
 }
 
 img{
-    width: 90px;
-    height: auto;
+    width: 290px;
+    height: 310px;
+    width: fit-content;
     align-items: center;
 }
