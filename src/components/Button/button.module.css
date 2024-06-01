@@ -7,30 +7,28 @@
   width: 150px;
   margin: 20px 5px;
 
-  &:hover{
-   background-color: #e53535;
-  border: 1px solid #e53535;
-  box-shadow: 2px 3px 2px 2px;
-  outline: none;
-}
-  &.active{
-   background-color: #e53535;
-  border: 1px solid #e53535;
-}
-}
-
-
-// .btn.active{
-//    background-color: #4a84cc;
-//   border: 1px solid #4a84cc;
-//   }
-
-  .btnActive{
-    composes:btn;
-      background-color: #4a84cc;
-  border: 1px solid #4a84cc;
-  
+  &:hover {
+    background-color: #e53535;
+    border: 1px solid #e53535;
+    box-shadow: 2px 3px 2px 2px;
+    outline: none;
   }
+  &.active {
+    background-color: #e53535;
+    border: 1px solid #e53535;
+  }
+}
+
+.btn.active{
+     background-color: #4a84cc;
+  border: 1px solid #4a84cc;
+  }
+
+.btnActive {
+  composes: btn;
+  background-color: #4a84cc;
+  border: 1px solid #4a84cc;
+}
 
 /* .btn:hover {
     color: #fff;
