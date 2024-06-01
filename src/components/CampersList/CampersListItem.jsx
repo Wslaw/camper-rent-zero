@@ -1,9 +1,8 @@
-import "./campers-list.css";
+import styles from "./campersList.module.css";
 
-const CampersListItem = ({ name, price, gallery}) => {
+const CampersListItem = ({ name, price, gallery }) => {
   return (
-      <li
-               className="campers-list-items">
+    <li className={styles.campersListItems}>
       <div>
         <img src={gallery[0]} alt="ico" />
       </div>

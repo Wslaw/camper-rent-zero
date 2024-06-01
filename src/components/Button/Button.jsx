@@ -1,8 +1,10 @@
-import "./button.css";
+import styles from "./button.module.scss";
 
-const Button = ({text, type="submit"}) => {
+const Button = ({ text, type = "submit", active }) => {
+    // const fullClassName=active ? `${styles.btn} ${styles.active}`:styles.btn
+    const fullClassName=active ? styles.btnActive : styles.btn
     return (
-        <button className="btn" type={type}>{text}</button>
+        <button className={fullClassName} type={type}>{text}</button>
     )
 };
 

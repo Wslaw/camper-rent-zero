@@ -7,11 +7,9 @@ const Main = () => {
     <main>
       <h2> Main</h2>
       <p>Main description</p>
-      <Button text="Click-me" type="button"/>
-      <Button text="Request" type="submit" />
-      
-      <Button text="Send" type="submit" />
-      
+      <Button text="Click-me" type="button" active={false} />
+      <Button text="Send" type="submit" active />
+
       <CampersList title="Best camper of year!" items={items} />
       {/* <CampersList title="Best camper of year!" /> */}
     </main>

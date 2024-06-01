@@ -1,4 +1,4 @@
-import "./campers-list.css"
+import styles from "./campersList.module.css";
 import CampersListItem from "./CampersListItem";
 
 // const CampersList = ({ title, items}) => {
@@ -12,7 +12,7 @@ const CampersList = ({ title, items = [] }) => {
     return (
         <>
            {title && <h1>{title}</h1>}
-        <ul className="campers-list">
+        <ul className={styles.campersList}>
           {elements}
             </ul>
       </>

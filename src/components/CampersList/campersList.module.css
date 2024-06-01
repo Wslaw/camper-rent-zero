@@ -1,9 +1,9 @@
-.campers-list{
+.campersList{
     margin: 20px 0;
     list-style: none;
 }
 
-.campers-list-items{
+.campersListItems{
     display: flex;
     align-items: center;
     justify-content: space-between;

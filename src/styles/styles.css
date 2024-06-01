@@ -1,8 +1,12 @@
+@import-normalize;
+
+
 body{
-    background-color: #355678;
+    margin: 0;
+    background-color: #9fb3c7;
 }
 
-.App{
+.app{
     display: flex;
     flex-direction: column;
     gap: 40px;
