@@ -57,7 +57,7 @@
   font-size: 16px;
   line-height: 125%;
   color: rgba(16, 24, 40, 0.6);
-  padding-right: 40px; /* Space for the icon */
+  padding-right: 40px; 
   resize: none;
 }
 
@@ -66,8 +66,10 @@
   right: 15px;
   width: 20px;
   height: 20px;
-  cursor: pointer; /* Make the icon clickable */
-  pointer-events: auto; /* Ensure the icon can be clicked */
+  cursor: pointer; 
+  pointer-events: auto; 
+  stroke: var(--main);
+  fill:transparent;
 }
 
 .btn {
