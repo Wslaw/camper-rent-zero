@@ -1,7 +1,8 @@
 .list {
   /* margin: 20px 0; */
   list-style: none;
-  width: 888px;
+  max-width: 888px;
+  /* width: 100%; */
   max-height: 1532px;
 }
 /* .container{
@@ -23,7 +24,8 @@
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 20px;
   padding: 0 24px;
-  width: 888px;
+  width: 100%;
+  /* width: 888px; */
   height: 358px;
   background-color: #d3b0b0;
 }

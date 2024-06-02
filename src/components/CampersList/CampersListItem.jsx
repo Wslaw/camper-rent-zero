@@ -2,8 +2,9 @@ import React from "react";
 import styles from "./campersList.module.css";
 import Icon from "../Icon/Icon.jsx";
 
-const CampersListItem = ({ name, price, gallery, rating, location, adults, transmission, engine, description, reviews }) => {
+const CampersListItem = ({ name, price, gallery, rating, location, adults, transmission, engine, description, reviews, details }) => {
   const reviewText = `${rating} (${reviews.length} Reviews)`;
+  const { beds, airConditioner, kitchen } = details;
 
   return (
     <li className={styles.campersListItems}>
@@ -41,15 +42,22 @@ const CampersListItem = ({ name, price, gallery, rating, location, adults, trans
           <button className={styles.btnDescription} type="button">
             <Icon name="icon-gas_station" className={styles.iconDown} /> <span>{engine}</span>
           </button>
+          {kitchen > 0 && (
+            <button className={styles.btnDescription} type="button">
+              <Icon name="icon-food" className={styles.iconFood} /> <span>kitchen</span>
+            </button>
+          )}
           <button className={styles.btnDescription} type="button">
-            <Icon name="icon-food" className={styles.iconFood} /> <span>Kitchen</span>
+            <Icon name="icon-bed" className={styles.iconBed} />{" "}
+            <span>
+              {beds} {beds > 1 ? "beds" : "bed"}
+            </span>
           </button>
-          <button className={styles.btnDescription} type="button">
-            <Icon name="icon-bed" className={styles.iconBed} /> <span>1 Bed</span>
-          </button>
-          <button className={styles.btnDescription} type="button">
-            <Icon name="icon-windy" className={styles.iconDown} /> <span>AC</span>
-          </button>
+          {airConditioner > 0 && (
+            <button className={styles.btnDescription} type="button">
+              <Icon name="icon-windy" className={styles.iconDown} /> <span>AC</span>
+            </button>
+          )}
         </div>
         <button className={styles.btn} type="button">
           Show more
