@@ -16,8 +16,10 @@ const Main = () => {
       <Button text="Send" type="submit" active /> */}
 
       <CampersList title="Best camper of year!" items={items} />
+      
       {/* <CampersList title="Best camper of year!" /> */}
     </main>
+    
   );
 };
 

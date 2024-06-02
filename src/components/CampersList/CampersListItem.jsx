@@ -1,8 +1,10 @@
+import React from "react";
 import styles from "./campersList.module.css";
-// import sprite from "../../assets/svg/sprite.svg"
-import Icon from "../Icon/Icon.jsx"
+import Icon from "../Icon/Icon.jsx";
 
-const CampersListItem = ({ name, price, gallery }) => {
+const CampersListItem = ({ name, price, gallery, rating, location, adults, transmission, engine, description, reviews }) => {
+  const reviewText = `${rating} (${reviews.length} Reviews)`;
+
   return (
     <li className={styles.campersListItems}>
       <div className={styles.container} style={{ backgroundImage: `url(${gallery[0]})` }}></div>
@@ -12,36 +14,32 @@ const CampersListItem = ({ name, price, gallery }) => {
             <h4 className={styles.title}>{name}</h4>
             <div className={styles.euro}>
               <p className={styles.text}>€ {price},00</p>
-              <Icon
-                name="icon-heart"
-                className={styles.icon}
-                // onClick={handleIconClick}
-              />
+              <Icon name="icon-heart" className={styles.icon} />
             </div>
           </div>
           <div className={styles.reviews}>
             <div className={styles.star}>
               <Icon name="icon-star" className={styles.iconStar} />
-              <p className={styles.textRew}>4.4(2 Reviews)</p>
+              <p className={styles.textRew}>{reviewText}</p>
             </div>
             <div className={styles.location}>
               <Icon name="icon-location" className={styles.iconLocation} />
-              <p className={styles.textLocation}>Kyiv, Ukraine</p>
+              <p className={styles.textLocation}>{location}</p>
             </div>
           </div>
         </div>
         <div className={styles.middleDescription}>
-          <p className={styles.textMiddle}>Embrace simplicity and freedom with the Mavericks panel truck, an ideal choice for solo travelers or couples seeking a compact and efficient way to explore the open roads.</p>
+          <p className={styles.textSupport}>{description}</p>
         </div>
         <div className={styles.downDescription}>
           <button className={styles.btnDescription} type="button">
-            <Icon name="icon-people" className={styles.iconDown} /> <span>2 adults</span>
+            <Icon name="icon-people" className={styles.iconDown} /> <span>{adults} adults</span>
           </button>
           <button className={styles.btnDescription} type="button">
-            <Icon name="icon-transmission" className={styles.iconTransmission} /> <span>Automatic</span>
+            <Icon name="icon-transmission" className={styles.iconTransmission} /> <span>{transmission}</span>
           </button>
           <button className={styles.btnDescription} type="button">
-            <Icon name="icon-gas_station" className={styles.iconDown} /> <span>Petrol</span>
+            <Icon name="icon-gas_station" className={styles.iconDown} /> <span>{engine}</span>
           </button>
           <button className={styles.btnDescription} type="button">
             <Icon name="icon-food" className={styles.iconFood} /> <span>Kitchen</span>

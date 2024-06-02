@@ -4,9 +4,13 @@
   width: 888px;
   max-height: 1532px;
 }
+/* .container{
+    display: flex;
+} */
 .campersList{
     display: flex;
     flex-direction: column;
+    gap: 32px;
 
 }
 .campersListItems {
@@ -122,7 +126,7 @@ color: var(--main);
 color: var(--main);
 }
 
-.textMiddle{
+.textSupport{
     font-family: var(--font-family);
 font-weight: 400;
 font-size: 16px;
