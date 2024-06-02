@@ -1,0 +1,22 @@
+.menu{
+list-style: none;
+display: flex;
+justify-content: center;
+}
+
+.item{
+
+}
+
+.link{
+padding: 10px 15px;
+text-decoration: none;
+color: black;
+font-size: -18px;
+font-weight: 800;
+}
+
+.link:global(.active){
+    color: red;
+}
+

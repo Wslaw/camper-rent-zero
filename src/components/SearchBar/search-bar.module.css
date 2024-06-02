@@ -1,0 +1,7 @@
+.sectionSearchBar{
+    color: blue;
+    padding: 16px;
+    width: 360px;
+    border: 1px solid var(--main);
+    border-radius: 5px;
+}

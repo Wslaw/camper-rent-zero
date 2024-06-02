@@ -10,12 +10,12 @@ const CampersList = ({ title, items = [] }) => {
         <CampersListItem key={_id}{...rest} />
     ));
     return (
-        <>
-           {title && <h1>{title}</h1>}
+        <div className={styles.list}>
+           {/* {title && <h1>{title}</h1>} */}
         <ul className={styles.campersList}>
           {elements}
             </ul>
-      </>
+      </div>
     );
 };
 
