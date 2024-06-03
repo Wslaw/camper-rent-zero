@@ -1,33 +1,30 @@
-// VehicleType.jsx
 import React from "react";
 import styles from "./vehicle-type.module.css";
 import Icon from "../Icon/Icon";
 
+const vehicleTypes = [
+  { id: "icon-camper1", label: "Van" },
+  { id: "icon-camper2", label: "Fully Integrated" },
+  { id: "icon-camper3", label: "Alcove" },
+];
+
 const VehicleType = () => {
   return (
     <div className={styles.container}>
-      <h3>Vehicle Type</h3>
+      <h3 className={styles.title}>Vehicle Type</h3>
       <div className={styles.iconLine}>
-        <Icon name="icon-line" width={360} height={1} />
+        <Icon name="icon-line" width={360} height={2} />
       </div>
       <div className={styles.radioButtons}>
-        <input type="radio" id="fullyIntegrated" name="vehicleType" value="Fully Integrated" />
-        <label htmlFor="fullyIntegrated">
-          <Icon name="icon-camper1" width={20} height={20} />
-          <span>Fully Integrated</span>
-        </label>
-
-        <input type="radio" id="alcove" name="vehicleType" value="Alcove" />
-        <label htmlFor="alcove">
-          <Icon name="icon-camper2" width={20} height={20} />
-          <span>Alcove</span>
-        </label>
-
-        <input type="radio" id="integrated" name="vehicleType" value="Integrated" />
-        <label htmlFor="integrated">
-          <Icon name="icon-camper3" width={20} height={20} />
-          <span>Integrated</span>
-        </label>
+        {vehicleTypes.map((type) => (
+          <div key={type.id} className={styles.radioButtonContainer}>
+            <input type="radio" id={type.id} name="vehicleType" className={styles.radioButton} />
+            <label htmlFor={type.id} className={styles.radioButtonLabel}>
+              <Icon className={styles.icon} name={type.id} width={48} height={28} />
+              <span className={styles.radioButtonText}>{type.label}</span>
+            </label>
+          </div>
+        ))}
       </div>
     </div>
   );

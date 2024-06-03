@@ -1,10 +1,12 @@
 import styles from "./home-page.module.css";
+// import Modal from "../../components/Modal/Modal";
 
 const HomePage = () => {
     
     return (
-        <div>
-            <h1>Home Page</h1>
+        <div className={styles.container}>
+            <h1 className={styles.title}>Home Page</h1>
+            {/* <Modal/> */}
         </div>
     )
 };

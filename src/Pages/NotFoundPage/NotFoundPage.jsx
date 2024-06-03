@@ -6,8 +6,8 @@ const NotFoundPage = () => {
     
     return (
         <div>
-            <h1>Error 404. Cannot found this page.</h1>
-            <Link to="/">To Home page</Link>
+            <h1 className={styles.title}>Error 404. Cannot found this page.</h1>
+            <Link className={styles.link} to="/">To Home page</Link>
         </div>
     )
 };

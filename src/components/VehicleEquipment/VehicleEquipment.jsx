@@ -15,7 +15,7 @@ const equipments = [
 const VehicleEquipment = () => {
   return (
     <div className={styles.container}>
-      <h3>Vehicle Equipment</h3>
+      <h3 className={styles.title}>Vehicle Equipment</h3>
       <div className={styles.iconLine}>
         <Icon name="icon-line" width={360} height={2} />
       </div>

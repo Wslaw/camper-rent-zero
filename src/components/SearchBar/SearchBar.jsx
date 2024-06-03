@@ -7,21 +7,19 @@ import VehicleType from "../VehicleType/VehicleType.jsx";
 const SearchBar = () => {
   return (
     <div className={styles.sectionSearchBar}>
-      {/* <h1>SearchBar</h1> */}
       <div className={styles.sbLoc}>
-        <h3>Location</h3>
+        <p className={styles.locationText}>Location</p>
         <div className={styles.inputWrapper}>
           <Icon name="icon-location" className={styles.iconLocation} />
           <input className={styles.location} placeholder="City" id="cityInput" name="city" aria-label="Enter city"></input>
         </div>
       </div>
-      <p>Filters</p>
+      <p className={styles.filterText}>Filters</p>
       <div className={styles.sbVehicle}>
-              <VehicleEquipment/>
+        <VehicleEquipment />
       </div>
       <div className={styles.sb}>
-              {/* <h3>Vehicle type</h3> */}
-              <VehicleType/>
+        <VehicleType />
       </div>
     </div>
   );

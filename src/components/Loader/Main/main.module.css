@@ -2,27 +2,6 @@
     display: flex;
     flex-direction: row;
     gap: 64px;
-    /* justify-content: space-between; */
-    background-color: red;
-    padding: 100px 48px;
+     padding: 100px 48px;
 }
 
-/* .btnLoadMore{    
-    border: 1px solid rgba(71, 84, 103, 0.2);
-border-radius: 200px;
-padding: 16px 32px;
-width: 145px;
-height: 56px;
-}
-
-.spanLoadMore{
-    font-family: var(--font-family);
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-letter-spacing: -0.01em;
-color: var(--main);
-} */
-/* <button className={styles.btnLoadMore} type="button">
-        <span className={styles.spanLoadMore}>Load more</span>
-      </button> */

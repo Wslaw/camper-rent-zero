@@ -2,12 +2,12 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-top: 32px;
 }
 
-h3 {
-  margin-top: 24px;
-  margin-bottom: 24px;
+.title {
+  /* margin-top: 24px;
+  margin-bottom: 24px; */
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 20px;
@@ -16,20 +16,50 @@ h3 {
 }
 
 .iconLine {
+    margin-top: 20px;
   margin-bottom: 24px;
-  width: 360px;
+  width: 360px; 
 }
 
 .radioButtons {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  gap: 10px; 
 }
 
-.radioButtons label {
+.radioButtonContainer {
+  position: relative;
+  width: 100px;
+  height: 95px;
+}
+
+.radioButton {
+  display: none;
+}
+
+.radioButtonLabel {
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
+  padding: 17px 0;
+  width: 100px; 
+  height: 95px; 
+  mix-blend-mode: multiply;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center; 
   cursor: pointer;
+}
+
+.radioButtonLabel:hover {
+  border: 1px solid var(--button);
+}
+
+.radioButton:checked + .radioButtonLabel {
+  border: 1px solid var(--button);
+}
+
+.radioButtonText {
+  margin-top: 8px;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
@@ -38,6 +68,14 @@ h3 {
   color: var(--main);
 }
 
-.radioButtons label span {
-  margin-left: 8px;
+
+.iconLine svg {
+  stroke-width: 1px;
+  stroke: rgba(16, 24, 40, 0.1);
+  width: 100%; 
+}
+
+.icon {
+  stroke: var(--main);
+  opacity: 0.8;
 }

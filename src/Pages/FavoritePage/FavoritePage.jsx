@@ -4,7 +4,7 @@ const FavoritePage = () => {
   return (
     <div>
       <Loader/>
-      <h1>Favorite Page</h1>
+      <h1 className={styles.title}>Favorite Page</h1>
     </div>
   );
 };
