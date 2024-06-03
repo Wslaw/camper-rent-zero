@@ -1,0 +1,211 @@
+/* .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  width: 982px;
+  max-height: 720px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 902px;
+  height: 32px;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: var(--main);
+}
+
+.iconClose {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.infoRow {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.iconStar, .iconLocation {
+  width: 16px;
+  height: 16px;
+}
+
+.price {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: var(--main);
+  margin-top: 16px;
+}
+
+.gallery {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.galleryImage {
+  width: 290px;
+  height: 310px;
+}
+
+.description {
+  margin-top: 24px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text);
+} */
+
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  width: 982px;
+  max-height: 720px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 902px;
+  height: 32px;
+}
+
+.modalTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: var(--main);
+}
+
+.iconClose {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.modalContent {
+  margin-top: 10px;
+}
+
+.modalInfo {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.modalRating, .modalLocation {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.iconStar, .iconLocation {
+  width: 16px;
+  height: 16px;
+}
+.iconLocation{
+    fill: transparent;
+}
+
+
+.textRew, .textLocation {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-decoration: underline;
+  color: var(--main);
+}
+
+.modalPrice {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: var(--main);
+  margin-top: 16px;
+}
+
+.modalGallery {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.modalImage {
+  width: 290px;
+  height: 310px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.modalDescription {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--secondary);
+  margin-top: 24px;
+   overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconClose {
+  cursor: pointer;
+  margin-top: -65px;
+  margin-right: -105px; 
+  width: 15px;
+  height: 15px;
+}

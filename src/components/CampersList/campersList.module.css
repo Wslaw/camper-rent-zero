@@ -4,12 +4,20 @@
   max-height: 1532px;
 }
 
-.campersList{
+/* .campersList{
     display: flex;
     flex-direction: column;
     gap: 32px;
-
+} */
+.campersList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
+
 .campersListItems {
   display: flex;
   align-items: center;
