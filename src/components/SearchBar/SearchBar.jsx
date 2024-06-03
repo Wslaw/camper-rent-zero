@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./search-bar.module.css";
 import Icon from "../Icon/Icon.jsx";
+import VehicleEquipment from "../VehicleEquipment/VehicleEquipment.jsx";
+import VehicleType from "../VehicleType/VehicleType.jsx";
 
 const SearchBar = () => {
   return (
@@ -10,15 +12,16 @@ const SearchBar = () => {
         <h3>Location</h3>
         <div className={styles.inputWrapper}>
           <Icon name="icon-location" className={styles.iconLocation} />
-          <input className={styles.location} placeholder="City"></input>
+          <input className={styles.location} placeholder="City" id="cityInput" name="city" aria-label="Enter city"></input>
         </div>
       </div>
       <p>Filters</p>
       <div className={styles.sbVehicle}>
-        <h3>Vehicle equipment</h3>
+              <VehicleEquipment/>
       </div>
       <div className={styles.sb}>
-        <h3>Vehicle type</h3>
+              {/* <h3>Vehicle type</h3> */}
+              <VehicleType/>
       </div>
     </div>
   );

@@ -1,70 +1,67 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# campers-rent-zero
 
-## Available Scripts
+## Опис
 
-In the project directory, you can run:
+Застосунок для компанії, що надає послуги оренди камперів в Україні. Застосунок складається з трьох сторінок:
 
-### `npm start`
+- **Домашня сторінка**: загальний опис послуг, що надає компанія. Стилізація та оформлення на ваш розсуд.
+- **Каталог камперів**: містить каталог камперів різної комплектації, які користувач може фільтрувати за місцем знаходження, обладнанням та типом.
+- **Улюблені оголошення**: сторінка з оголошеннями, які були додані користувачем в улюблені.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Установка
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Залежності
+Проект використовує наступні залежності:
+- `@emotion/react`: ^11.11.4
+- `@emotion/styled`: ^11.11.5
+- `@testing-library/jest-dom`: ^5.17.0
+- `@testing-library/react`: ^13.4.0
+- `@testing-library/user-event`: ^13.5.0
+- `axios`: ^1.7.2
+- `date-fns`: ^3.6.0
+- `react`: ^18.3.1
+- `react-datepicker`: ^6.9.0
+- `react-dom`: ^18.3.1
+- `react-router-dom`: ^6.23.1
+- `react-scripts`: 5.0.1
+- `web-vitals`: ^2.1.4
 
-### `npm test`
+### Інструкція
+Для встановлення та запуску проекту виконайте наступні команди:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# Клонування репозиторію
+git clone https://github.com/your_username/camper-rent-zero.git
 
-### `npm run build`
+# Перехід до директорії проекту
+cd camper-rent-zero
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Встановлення залежностей
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Запуск проекту
+npm start
+Використання
+Після запуску проекту, ви зможете використовувати застосунок через браузер, відвідуючи http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Документація
+Детальна документація наразі відсутня.
 
-### `npm run eject`
+Підтримка і Контакти
+Якщо у вас виникли питання або проблеми, ви можете створити issue на GitHub або зв'язатися з нами через електронну пошту: support@camper-rent-zero.com.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Вклад в проект
+Ми вітаємо внески до проекту. Якщо ви хочете внести вклад, будь ласка, дотримуйтесь наступних кроків:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Форкніть цей репозиторій.
+Створіть нову гілку (git checkout -b feature/YourFeature).
+Внесіть свої зміни і закомітьте їх (git commit -m 'Add some feature').
+Відправте гілку на GitHub (git push origin feature/YourFeature).
+Створіть новий Pull Request.
+Ліцензія
+Цей проект ліцензується на умовах MIT License.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Автори і Подяки
+Автор: Ім'я Автора (https://github.com/Wslaw/
+Подяки: Дякуємо всім, хто зробив внесок у цей проект.

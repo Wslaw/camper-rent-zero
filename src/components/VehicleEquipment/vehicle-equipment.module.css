@@ -1,0 +1,63 @@
+/* vehicle-equipment.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.iconLine {
+  margin-bottom: 24px;
+  width: 360px; /* Установка ширины иконки прямой линии */
+}
+
+.checkboxButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.checkboxButton {
+    /* gap: 10px; */
+
+  border: 1px solid var(--button);
+  border-radius: 10px;
+  padding: 17px 40px;
+  width: 112px;
+  height: 95px;
+  mix-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.checkboxButton input[type="checkbox"] {
+  display: none;
+}
+
+.checkboxButton label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkboxButtonText {
+  margin-top: 8px;
+}
+
+/* Дополнительные стили для иконки прямой линии */
+.iconLine svg {
+  stroke-width: 1px;
+  stroke: rgba(16, 24, 40, 0.1);
+
+}
+.icon {
+  fill: transparent;
+  stroke: black;
+  width: 30px;
+}

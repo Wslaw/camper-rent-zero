@@ -17,7 +17,7 @@ function App() {
       <MainMenu />
       <Routes>
         <Route path="/" element={<HomePage/>}/>
-        <Route path="/favorite" element={<FavoritePage/>}/>
+        <Route path="/favorites" element={<FavoritePage/>}/>
         <Route path="/catalog" element={<CatalogPage/>}/>
         <Route path="*" element={<NotFoundPage/>}/>
       </Routes>

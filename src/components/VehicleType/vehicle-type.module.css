@@ -1,0 +1,43 @@
+/* vehicle-type.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main);
+}
+
+.iconLine {
+  margin-bottom: 24px;
+  width: 360px;
+}
+
+.radioButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radioButtons label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+  color: var(--main);
+}
+
+.radioButtons label span {
+  margin-left: 8px;
+}
