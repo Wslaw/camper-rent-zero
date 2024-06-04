@@ -1,9 +1,12 @@
 import styles from "./home-page.module.css";
 import Footer from "../../components/Footer/Footer";
+import Loader from "../../components/Loader/Loader";
+
 const HomePage = () => {
     
     return (
       <div className={styles.container}>
+        <Loader/>
         <h1 className={styles.title}>CampersRent</h1>
         <div className={styles.wrap}>
           <div className={styles.img}></div>

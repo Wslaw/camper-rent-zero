@@ -1,7 +1,7 @@
 
 .container{
     /* padding: 0 16px; */
-    background-color: rgb(191, 217, 217);
+    background-color: #a7c8cd;
     /* height: 90vh; */
     display: flex;
     flex-direction: column;
@@ -18,22 +18,24 @@
 
 .wrap{
     display: flex;
-    gap: 360px;
+    gap: 260px;
     margin-top: 20px;
 }
 
 .img{
     background-image: url(../../assets/img/camp1.jpg);
-    width: 600px;
+    width: 550px;
     height: auto;
     margin-left: 50px;
     
+    /* width: 100%; */
 }
 
 .list{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    /* align-items: start; */
     gap: 8px;
 };
 

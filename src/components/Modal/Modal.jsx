@@ -12,7 +12,6 @@ const Modal = ({ isOpen, onClose, camper }) => {
   const [activeTab, setActiveTab] = useState(null);
   const [showFeatures, setShowFeatures] = useState(false);
   const [showReviews, setShowReviews] = useState(false);
-console.log(activeTab);
   useEffect(() => {
     const handleEsc = (event) => {
       if (event.keyCode === 27) {
@@ -81,9 +80,12 @@ console.log(activeTab);
             <button className={styles.modalButton} onClick={() => handleTabClick("reviews")}>
               Reviews
             </button>
+            <hr width="2" className={styles.line}></hr>
           </div>
           {showFeatures && <Features style={{ marginTop: "44px" }} />}
           {showReviews && <Reviews style={{ marginTop: "44px" }} />}
+          <hr size="3px" width="500px" align="left"></hr>
+
         </div>
       </div>
     </div>,

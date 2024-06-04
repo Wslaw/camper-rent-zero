@@ -52,6 +52,8 @@
   height: 24px;
   stroke: #000;
   fill: transparent;
+    cursor: pointer;
+
 }
 
 .euro {
@@ -202,5 +204,11 @@ color: var(--main);
     height: 20px;
     fill: transparent;
     stroke: var(--main);
+}
+
+
+.iconHeart {
+  stroke: #fff; 
+  cursor: pointer;
 }
 

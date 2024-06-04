@@ -1,9 +1,10 @@
 import styles from "./reviews.module.css";
+import FormField from "../FormField/FormField.jsx";
 
 const Reviews = () => {
   return (
     <div className={styles.reviews}>
-      <h2>REVIEWS</h2>
+      <FormField />{" "}
     </div>
   );
 };

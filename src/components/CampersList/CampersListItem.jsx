@@ -1,6 +1,4 @@
-
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./campersList.module.css";
 import Icon from "../Icon/Icon";
 import Modal from "../Modal/Modal.jsx";
@@ -10,8 +8,15 @@ import Reviews from "../Reviews/Reviews";
 const CampersListItem = ({ name, price, gallery, rating, location, adults, transmission, engine, description, reviews, details }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(null);
+  const [isFavorite, setIsFavorite] = useState(false);
+
   const reviewText = `${rating} (${reviews.length} Reviews)`;
   const { beds, airConditioner, kitchen } = details;
+
+  useEffect(() => {
+    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    setIsFavorite(savedFavorites.includes(name));
+  }, [name]);
 
   const handleShowMore = () => {
     setIsModalOpen(true);
@@ -23,6 +28,19 @@ const CampersListItem = ({ name, price, gallery, rating, location, adults, trans
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
+  };
+
+  const handleFavoriteClick = () => {
+    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    if (isFavorite) {
+      const updatedFavorites = savedFavorites.filter((fav) => fav !== name);
+      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+      setIsFavorite(false);
+    } else {
+      savedFavorites.push(name);
+      localStorage.setItem("favorites", JSON.stringify(savedFavorites));
+      setIsFavorite(true);
+    }
   };
 
   const camper = {
@@ -44,7 +62,11 @@ const CampersListItem = ({ name, price, gallery, rating, location, adults, trans
             <h4 className={styles.title}>{name}</h4>
             <div className={styles.euro}>
               <p className={styles.text}>€ {price},00</p>
-              <Icon name="icon-heart" className={styles.icon} />
+              <Icon
+                name={isFavorite ? "icon-heart_red" : "icon-heart"}
+                className={`${styles.icon} ${isFavorite ? styles.favorite : ""}`}
+                onClick={handleFavoriteClick}
+              />
             </div>
           </div>
           <div className={styles.reviews}>
