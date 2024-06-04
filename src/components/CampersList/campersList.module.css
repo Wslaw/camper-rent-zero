@@ -4,11 +4,7 @@
   max-height: 1532px;
 }
 
-/* .campersList{
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-} */
+
 .campersList {
   list-style-type: none;
   padding: 0;
@@ -18,7 +14,7 @@
   gap: 16px;
 }
 
-.campersListItems {
+.campersListItem {
   display: flex;
   align-items: center;
   gap: 24px;
@@ -27,7 +23,6 @@
   padding: 0 24px;
   width: 100%;
   min-height: 358px;
-  /* background-color: #d3b0b0; */
 }
 
 .container {
@@ -42,7 +37,6 @@
 .description {
     display: flex;
     flex-direction: column;
-  /* background: rgb(184, 178, 178); */
   width: 526px;
   height: 310px;
   gap: 24px;
@@ -149,11 +143,9 @@ color: var(--text);
 }
 
 .downDescription{
-  background: var(--block-features);
 mix-blend-mode: multiply;
     width: 526px;
 height: 96px;
-background-color: azure;
 display: flex;
 flex-wrap: wrap;
 gap: 7px;

@@ -6,10 +6,10 @@ const MainMenu = () => {
     
     return (
       <div className={styles.container}>
-        <div className={styles.logo}>
+        <NavLink className={styles.logo} to="/">
           <Icon name="icon-camper1" className={styles.iconCamper} />
           <span className={styles.logoTitle}>CampersRent</span>
-        </div>
+        </NavLink>
         <ul className={styles.menu}>
           <li className={styles.item}>
             <NavLink className={styles.link} to="/">
@@ -24,6 +24,16 @@ const MainMenu = () => {
           <li className={styles.item}>
             <NavLink className={styles.link} to="/favorites">
               Faforites
+            </NavLink>
+          </li>
+          <li className={styles.item}>
+            <NavLink className={styles.linkLogin} to="/sign-in">
+              Sign In
+            </NavLink>
+          </li>
+          <li className={styles.item}>
+            <NavLink className={styles.linkRegister} to="/sign-up">
+              Sign Up
             </NavLink>
           </li>
         </ul>

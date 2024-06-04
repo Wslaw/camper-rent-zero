@@ -1,12 +1,10 @@
-/* vehicle-equipment.module.css */
 .container {
   display: flex;
   flex-direction: column;
 }
 
 .title{
-   /* margin-top: 24px;
-  margin-bottom: 24px; */
+   
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 20px;
@@ -34,7 +32,6 @@
   padding: 17px 40px;
   width: 112px;
   height: 95px;
-  /* mix-blend-mode: multiply; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;

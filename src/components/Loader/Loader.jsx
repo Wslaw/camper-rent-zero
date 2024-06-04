@@ -4,7 +4,6 @@ import styles from "./loader.module.css";
 const Loader = () => {
   const [isLoading, setIsLoading] = useState(true);
 
-  // Симуляция задержки загрузки контента
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);

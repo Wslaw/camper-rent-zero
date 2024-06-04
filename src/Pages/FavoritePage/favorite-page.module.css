@@ -1,0 +1,14 @@
+.favorite{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: end;
+}
+.title{
+text-align: center;
+}
+
+.footer{
+display: flex;
+}

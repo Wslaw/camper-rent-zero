@@ -1,0 +1,7 @@
+.sectionCatalog{
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+     padding: 100px 48px;
+}
+

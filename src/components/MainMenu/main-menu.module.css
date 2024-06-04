@@ -1,5 +1,5 @@
 .container {
-  padding: 0 16px;
+  padding: 10px 16px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,6 +15,9 @@
   padding: 0 4px;
   border-radius: 8px;
   align-items: center;
+}
+.logo:hover{
+  box-shadow: 2px 2px 4px 2px  #1539b3;
 }
 
 .logoTitle {
@@ -55,4 +58,28 @@
 
 .link:global(.active) {
   color: rgb(144, 34, 218);
+}
+
+.link:hover{
+  color: blue;
+}
+
+
+.linkRegister,
+.linkLogin{
+  margin-left: 5px;
+  border-radius: 5px;
+  padding: 4px 10px;
+  gap: 5px;
+  border: 1px solid #676859;
+  background-color: #84a2d7;
+  cursor: pointer;
+
+}
+
+.linkRegister:hover,
+.linkLogin:hover{
+  border: 1px solid #5286df;
+  background-color: #5286df;
+  
 }

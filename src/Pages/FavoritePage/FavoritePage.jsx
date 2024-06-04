@@ -1,10 +1,12 @@
 import styles from "./favorite-page.module.css";
-import Loader from "../../components/Loader/Loader.jsx";
+import Footer from "../../components/Footer/Footer";
 const FavoritePage = () => {
   return (
-    <div>
-      <Loader/>
-      <h1 className={styles.title}>Favorite Page</h1>
+    <div className={styles.favorite}>
+      <div className={styles.title}>
+        <h1>Favorite Page</h1>
+      </div>
+      <Footer className={styles.footer} />
     </div>
   );
 };

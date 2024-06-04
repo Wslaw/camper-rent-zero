@@ -1,8 +1,6 @@
-// VehicleEquipment.jsx
 import React from "react";
 import styles from "./vehicle-equipment.module.css";
 import Icon from "../Icon/Icon";
-// import sprite from "../../assets/svg/sprite.svg";
 
 const equipments = [
   { id: "icon-windy", label: "AC" },

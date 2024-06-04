@@ -1,0 +1,42 @@
+
+.container{
+    /* padding: 0 16px; */
+    background-color: rgb(191, 217, 217);
+    /* height: 90vh; */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.title{
+    padding-top: 10px ;
+    text-align: center;
+    font-family: Inter, serif;
+    font-weight: 400;
+    font-size: 38px;
+}
+
+.wrap{
+    display: flex;
+    gap: 360px;
+    margin-top: 20px;
+}
+
+.img{
+    background-image: url(../../assets/img/camp1.jpg);
+    width: 600px;
+    height: auto;
+    margin-left: 50px;
+    
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+};
+
+.item{
+
+}

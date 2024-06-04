@@ -46,7 +46,7 @@
 }
 
 .formControl {
-    width: 320px;
+  width: 320px;
   flex-grow: 1;
   background: var(--inputs);
   outline: none;
@@ -57,7 +57,7 @@
   font-size: 16px;
   line-height: 125%;
   color: rgba(16, 24, 40, 0.6);
-  padding-right: 40px; 
+  padding-right: 40px;
   resize: none;
 }
 
@@ -66,10 +66,10 @@
   right: 15px;
   width: 20px;
   height: 20px;
-  cursor: pointer; 
-  pointer-events: auto; 
+  cursor: pointer;
+  pointer-events: auto;
   stroke: var(--main);
-  fill:transparent;
+  fill: transparent;
 }
 
 .btn {
