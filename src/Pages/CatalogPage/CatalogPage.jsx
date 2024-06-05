@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./catalog-page.module.css";
-import Main from "../../components/Main/Main.jsx";
+import Main from "../../components/Loader/Main/Main.jsx";
 // import Footer from "../../components/Footer/Footer.jsx";
 import Loader from "../../components/Loader/Loader.jsx";
 

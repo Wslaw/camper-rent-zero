@@ -1,4 +1,4 @@
-/* .footer {
+.footer {
   font-family: Inter, serif;
   background-color: #a7c8cd;
     display: flex;
@@ -39,4 +39,4 @@
   flex-direction: column;
   gap: 100px;
 }
- */
+

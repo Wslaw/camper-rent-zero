@@ -35,14 +35,7 @@ display: flex;
   margin-top: 20px;
 }
 
-/* .txt{
-  background-color: rgb(181, 43, 22);
-  padding: 150px;
-  text-align: center;
-  font-family: var(--font-family);
-  font-size: 28px;
-  color: #fff;
-} */
+
 
 @keyframes colorChange {
   0% {

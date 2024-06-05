@@ -1,5 +1,5 @@
 import styles from "./home-page.module.css";
-// import Footer from "../../components/Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import Loader from "../../components/Loader/Loader";
 
 const HomePage = () => {
@@ -46,7 +46,7 @@ const HomePage = () => {
           </ul>
         </div>
 
-        {/* <Footer/> */}
+        <Footer/>
       </div>
     );
 };

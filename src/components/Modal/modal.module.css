@@ -38,11 +38,7 @@
 }
 
 .iconClose {
-  /* width: 24px;
-  height: 24px;
-  border: 1px solid rgb(129, 125, 125); */
-  /* background-color: rgb(224, 224, 236); */
-  /* border-radius: 50%; */
+
   stroke: var(--main);
   cursor: pointer;
 }
