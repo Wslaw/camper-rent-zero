@@ -28,7 +28,7 @@ const MainMenu = () => {
           </li>
           <li className={styles.item}>
             <NavLink className={styles.linkLogin} to="/sign-in">
-              Sign In
+              Log In
             </NavLink>
           </li>
           <li className={styles.item}>

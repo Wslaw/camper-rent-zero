@@ -7,6 +7,7 @@
 }
 .title{
 text-align: center;
+color: y;
 }
 
 .footer{
@@ -32,4 +33,35 @@ display: flex;
 
 .footer {
   margin-top: 20px;
+}
+
+/* .txt{
+  background-color: rgb(181, 43, 22);
+  padding: 150px;
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 28px;
+  color: #fff;
+} */
+
+@keyframes colorChange {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #000;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+.txt {
+  background-color: rgb(181, 43, 22);
+  padding: 150px;
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 28px;
+  color: #fff;
+  animation: colorChange 1s infinite;
 }

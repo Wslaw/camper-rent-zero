@@ -15,7 +15,13 @@
 
 .mainContent {
   flex-grow: 1;
-  padding: 20px;
   overflow: auto;
   position: relative;
+}
+.container {
+  /* margin-top: 60px;  */
+}
+
+.mainContent {
+  /* padding: 20px; */
 }

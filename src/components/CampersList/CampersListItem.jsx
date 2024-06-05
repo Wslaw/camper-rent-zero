@@ -3,7 +3,20 @@ import styles from "./campersList.module.css";
 import Icon from "../Icon/Icon";
 import Modal from "../Modal/Modal.jsx";
 
-const CampersListItem = ({ name, price, gallery = [], rating = 0, location = "", adults = 0, transmission = "", engine = "", description = "", reviews = [], details = { kitchen: 0, beds: 0, airConditioner: 0 } }) => {
+const CampersListItem = ({
+  name,
+  price,
+  gallery = [],
+  rating = 0,
+  location = "",
+  adults = 0,
+  transmission = "",
+  engine = "",
+  description = "",
+  reviews = [],
+  details = { kitchen: 0, beds: 0, airConditioner: 0 },
+  removeFromFavorites = null, // Убедимся, что эта функция может быть null
+}) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -19,6 +32,9 @@ const CampersListItem = ({ name, price, gallery = [], rating = 0, location = "",
 
     if (isFavorite) {
       updatedFavorites = existingFavorites.filter((camper) => camper.name !== name);
+      if (removeFromFavorites) {
+        removeFromFavorites(name); // Remove from favorites in parent component
+      }
     } else {
       const camper = { name, price, gallery, rating, location, adults, transmission, engine, description, reviews, details };
       updatedFavorites = [...existingFavorites, camper];
@@ -71,7 +87,6 @@ const CampersListItem = ({ name, price, gallery = [], rating = 0, location = "",
         </div>
         <div className={styles.middleDescription}>
           <p className={styles.textSupport}>{description}</p>
-          {/* Remove erroneous setActiveTab function calls */}
         </div>
         <div className={styles.downDescription}>
           <button className={styles.btnDescription} type="button">

@@ -1,8 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
   <defs>
-    <symbol id="icon-star" viewBox="0 0 32 32">
-      <path fill="#ffc531" stroke="#ffc531" stroke-width="2.4" d="M12.4 9.394 16 2.572l3.6 6.822a2.2 2.2 0 0 0 1.571 1.141l7.601 1.315-5.376 5.532a2.2 2.2 0 0 0-.6 1.846l1.098 7.635-6.922-3.404a2.199 2.199 0 0 0-1.941 0l-6.922 3.404 1.098-7.635a2.2 2.2 0 0 0-.6-1.846L3.231 11.85l7.601-1.315a2.202 2.202 0 0 0 1.571-1.141zm16.635 2.185zM7.767 27.031z" style="fill:var(--color1, #ffc531);stroke:var(--color1, #ffc531)"/>
-    </symbol>
+   
+
+
+
+
     <symbol id="icon-bed" viewBox="0 0 32 32">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.24" d="M3 26v-7a4.012 4.012 0 0 1 4-4h18a4.012 4.012 0 0 1 4 4v7m-5-11H6V8.5A2.504 2.504 0 0 1 8.5 6h15A2.504 2.504 0 0 1 26 8.5V15h-2z"/>
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.24" d="M3 26v-.5A1.504 1.504 0 0 1 4.5 24h23a1.504 1.504 0 0 1 1.5 1.5v.5M7 15v-1a2.002 2.002 0 0 1 2-2h5a2.002 2.002 0 0 1 2 2m0 0v1m0-1a2.008 2.008 0 0 1 2-2h5a2.002 2.002 0 0 1 2 2v1"/>
@@ -68,6 +70,14 @@
 <path d="m13.5 4.5-9 9" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="m4.5 4.5 9 9"  stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
+
+<symbol id="icon-star" viewBox="0 0 24 24">
+    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+  </symbol>
+
+   <symbol id="icon-starOLD" viewBox="0 0 32 32">
+      <path fill="#ffc531" stroke="#ffc531" stroke-width="2.4" d="M12.4 9.394 16 2.572l3.6 6.822a2.2 2.2 0 0 0 1.571 1.141l7.601 1.315-5.376 5.532a2.2 2.2 0 0 0-.6 1.846l1.098 7.635-6.922-3.404a2.199 2.199 0 0 0-1.941 0l-6.922 3.404 1.098-7.635a2.2 2.2 0 0 0-.6-1.846L3.231 11.85l7.601-1.315a2.202 2.202 0 0 0 1.571-1.141zm16.635 2.185zM7.767 27.031z" style="fill:var(--color1, #ffc531);stroke:var(--color1, #ffc531)"/>
+    </symbol>
 
      <!-- <symbol id="icon-close" viewBox="0 0 32 32">
       <path d="M31.708 25.708 22 16l9.708-9.708a1 1 0 0 0 0-1.414L27.122.292a1 1 0 0 0-1.414-.001L16 9.999 6.292.291a.998.998 0 0 0-1.414.001L.292 4.878a1 1 0 0 0 0 1.414L10 16 .292 25.708a.999.999 0 0 0 0 1.414l4.586 4.586a1 1 0 0 0 1.414 0L16 22l9.708 9.708a1 1 0 0 0 1.414 0l4.586-4.586a.999.999 0 0 0 0-1.414z"/>

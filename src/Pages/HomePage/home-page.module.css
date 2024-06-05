@@ -1,44 +1,50 @@
 
-.container{
-    /* padding: 0 16px; */
-    background-color: #a7c8cd;
-    /* height: 90vh; */
+
+
+.container {
+    padding: 50px 16px 0;
+    background-image: url(../../assets/img/pngwing.com\ \(9\).png); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 90vh;
     display: flex;
     flex-direction: column;
-    
 }
 
-.title{
-    padding-top: 10px ;
+.title {
+    padding-top: 10px;
+    letter-spacing: 20px;
     text-align: center;
     font-family: Inter, serif;
     font-weight: 400;
     font-size: 38px;
+    color: #d3ec70;
 }
 
-.wrap{
+.wrap {
     display: flex;
     gap: 260px;
     margin-top: 20px;
 }
 
-.img{
-    background-image: url(../../assets/img/camp1.jpg);
-    width: 550px;
+.img {
+    background-image: url(../../assets/img/camp9.jpg);
+        background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
+    width: 600px;
     height: auto;
     margin-left: 50px;
-    
-    /* width: 100%; */
+border-radius: 25px;
 }
 
-.list{
+.list {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* align-items: start; */
+    color: #60750b; 
     gap: 8px;
-};
-
-.item{
-
 }
+
+

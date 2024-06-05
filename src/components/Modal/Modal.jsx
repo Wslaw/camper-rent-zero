@@ -71,7 +71,9 @@ const Modal = ({ isOpen, onClose, camper }) => {
             </button>
           </div>
           {activeTab === "features" && <Features />}
-          {activeTab === "reviews" && <Reviews />}
+          {/* {activeTab === "reviews" && <Reviews />} */}
+          {activeTab === "reviews" && <Reviews reviews={reviews} />}
+
           <hr size="3px" width="500px" align="left"></hr>
         </div>
       </div>

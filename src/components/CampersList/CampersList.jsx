@@ -1,15 +1,14 @@
-
 import React from "react";
 import CampersListItem from "./CampersListItem";
 import styles from "./campersList.module.css";
 
-const CampersList = ({ campers }) => {
+const CampersList = ({ campers, removeFromFavorites }) => {
   return (
     <div className={styles.list}>
       <ul className={styles.campersList}>
         {campers.map((camper) => (
           <CampersListItem
-            key={camper._id}
+            key={camper.name}
             name={camper.name}
             price={camper.price}
             gallery={camper.gallery}
@@ -21,6 +20,7 @@ const CampersList = ({ campers }) => {
             description={camper.description}
             reviews={camper.reviews}
             details={camper.details}
+            removeFromFavorites={removeFromFavorites} 
           />
         ))}
       </ul>
