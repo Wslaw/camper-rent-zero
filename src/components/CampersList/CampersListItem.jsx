@@ -1,33 +1,49 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./campersList.module.css";
 import Icon from "../Icon/Icon";
 import Modal from "../Modal/Modal.jsx";
-import Features from "../Features/Features";
-import Reviews from "../Reviews/Reviews";
 
 const CampersListItem = ({ name, price, gallery = [], rating = 0, location = "", adults = 0, transmission = "", engine = "", description = "", reviews = [], details = { kitchen: 0, beds: 0, airConditioner: 0 } }) => {
   const [isFavorite, setIsFavorite] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const addFavorite = (camper) => {
-    const existingFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    const updatedFavorites = [...existingFavorites, camper];
-    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-  };
-
-  const removeFavorite = (name) => {
-    const existingFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    const updatedFavorites = existingFavorites.filter((camper) => camper.name !== name);
-    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-  };
+  useEffect(() => {
+    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const isFav = savedFavorites.some((camper) => camper.name === name);
+    setIsFavorite(isFav);
+  }, [name]);
 
   const toggleFavorite = () => {
+    const existingFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    let updatedFavorites;
+
     if (isFavorite) {
-      removeFavorite(name);
+      updatedFavorites = existingFavorites.filter((camper) => camper.name !== name);
     } else {
       const camper = { name, price, gallery, rating, location, adults, transmission, engine, description, reviews, details };
-      addFavorite(camper);
+      updatedFavorites = [...existingFavorites, camper];
     }
+
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
     setIsFavorite(!isFavorite);
+  };
+
+  const handleShowMore = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const camper = {
+    name,
+    price,
+    gallery,
+    rating,
+    location,
+    description,
+    reviews,
   };
 
   return (
@@ -55,10 +71,7 @@ const CampersListItem = ({ name, price, gallery = [], rating = 0, location = "",
         </div>
         <div className={styles.middleDescription}>
           <p className={styles.textSupport}>{description}</p>
-          <div className={styles.links}>
-            <button className={styles.link}>Features</button>
-            <button className={styles.link}>Reviews</button>
-          </div>
+          {/* Remove erroneous setActiveTab function calls */}
         </div>
         <div className={styles.downDescription}>
           <button className={styles.btnDescription} type="button">
@@ -87,10 +100,11 @@ const CampersListItem = ({ name, price, gallery = [], rating = 0, location = "",
             </button>
           )}
         </div>
-        <button className={styles.btn} type="button" >
+        <button className={styles.btn} type="button" onClick={handleShowMore}>
           Show more
         </button>
       </div>
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal} camper={camper} />
     </li>
   );
 };

@@ -1,17 +1,13 @@
-
-
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import styles from "./modal.module.css";
 import Icon from "../Icon/Icon";
 import Features from "../Features/Features";
 import Reviews from "../Reviews/Reviews";
-// import FormField from "../FormField/FormField";
 
 const Modal = ({ isOpen, onClose, camper }) => {
   const [activeTab, setActiveTab] = useState(null);
-  const [showFeatures, setShowFeatures] = useState(false);
-  const [showReviews, setShowReviews] = useState(false);
+
   useEffect(() => {
     const handleEsc = (event) => {
       if (event.keyCode === 27) {
@@ -39,13 +35,6 @@ const Modal = ({ isOpen, onClose, camper }) => {
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
-    if (tab === "features") {
-      setShowFeatures(true);
-      setShowReviews(false);
-    } else if (tab === "reviews") {
-      setShowReviews(true);
-      setShowFeatures(false);
-    }
   };
 
   return ReactDOM.createPortal(
@@ -80,12 +69,10 @@ const Modal = ({ isOpen, onClose, camper }) => {
             <button className={styles.modalButton} onClick={() => handleTabClick("reviews")}>
               Reviews
             </button>
-            <hr width="2" className={styles.line}></hr>
           </div>
-          {showFeatures && <Features style={{ marginTop: "44px" }} />}
-          {showReviews && <Reviews style={{ marginTop: "44px" }} />}
+          {activeTab === "features" && <Features />}
+          {activeTab === "reviews" && <Reviews />}
           <hr size="3px" width="500px" align="left"></hr>
-
         </div>
       </div>
     </div>,

@@ -63,3 +63,42 @@ width: 100%;
   stroke: var(--main);
   width: 30px;
 }
+
+.checkboxButton {
+  /* Початкові стилі для кнопок */
+  /* background-color: transparent; */
+  /* border: 1px solid transparent; */
+  transition: border-color 0.3s ease;
+}
+
+.checkboxButton:hover {
+  border-color: var(--button); /* Бордер при наведенні */
+}
+
+.checkboxButton input[type="checkbox"] {
+  display: none; /* Приховати сам чекбокс */
+  
+}
+
+.checkboxButton input[type="checkbox"]:checked + label {
+  border-color: var(--button); /* Бордер при натисканні */
+  
+}
+
+/* .checkboxButton input[type="checkbox"]:checked + .radioButtonLabel {
+  border: 1px solid var(--button);
+} */
+.checkboxButton input[type="checkbox"]:checked + label {
+  border: 1px solid var(--button);
+}
+
+
+.checkboxButton label {
+  /* Стилі для лейбла, який відображається над чекбоксом */
+  display: flex;
+  align-items: center;
+}
+
+.checkboxButton label .icon {
+  margin-right: 8px; /* Відступ між іконкою та текстом */
+}

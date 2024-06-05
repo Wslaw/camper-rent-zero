@@ -19,7 +19,7 @@ const VehicleEquipment = () => {
       </div>
       <div className={styles.checkboxButtons}>
         {equipments.map((equipment) => (
-          <button key={equipment.id} className={styles.checkboxButton}>
+          <button key={equipment.id} className={`${styles.checkboxButton} ${styles.radioButton}`}>
             <input type="checkbox" id={equipment.id} />
             <label htmlFor={equipment.id}>
               <Icon className={styles.icon} name={equipment.id} width={20} height={20} />
