@@ -1,78 +1,51 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./campersList.module.css";
 import Icon from "../Icon/Icon";
 import Modal from "../Modal/Modal.jsx";
 import Features from "../Features/Features";
 import Reviews from "../Reviews/Reviews";
 
-const CampersListItem = ({ name, price, gallery, rating, location, adults, transmission, engine, description, reviews, details }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState(null);
+const CampersListItem = ({ name, price, gallery = [], rating = 0, location = "", adults = 0, transmission = "", engine = "", description = "", reviews = [], details = { kitchen: 0, beds: 0, airConditioner: 0 } }) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
-  const reviewText = `${rating} (${reviews.length} Reviews)`;
-  const { beds, airConditioner, kitchen } = details;
-
-  useEffect(() => {
-    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    setIsFavorite(savedFavorites.includes(name));
-  }, [name]);
-
-  const handleShowMore = () => {
-    setIsModalOpen(true);
+  const addFavorite = (camper) => {
+    const existingFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const updatedFavorites = [...existingFavorites, camper];
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
   };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
+  const removeFavorite = (name) => {
+    const existingFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const updatedFavorites = existingFavorites.filter((camper) => camper.name !== name);
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
   };
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
-
-  const handleFavoriteClick = () => {
-    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  const toggleFavorite = () => {
     if (isFavorite) {
-      const updatedFavorites = savedFavorites.filter((fav) => fav !== name);
-      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-      setIsFavorite(false);
+      removeFavorite(name);
     } else {
-      savedFavorites.push(name);
-      localStorage.setItem("favorites", JSON.stringify(savedFavorites));
-      setIsFavorite(true);
+      const camper = { name, price, gallery, rating, location, adults, transmission, engine, description, reviews, details };
+      addFavorite(camper);
     }
-  };
-
-  const camper = {
-    name,
-    price,
-    gallery,
-    rating,
-    location,
-    description,
-    reviews,
+    setIsFavorite(!isFavorite);
   };
 
   return (
     <li className={styles.campersListItem}>
-      <div className={styles.container} style={{ backgroundImage: `url(${gallery[0]})` }}></div>
+      <div className={styles.container} style={{ backgroundImage: `url(${gallery[0] || ""})` }}></div>
       <div className={styles.description}>
         <div className={styles.footerDescription}>
           <div className={styles.footDescTop}>
             <h4 className={styles.title}>{name}</h4>
             <div className={styles.euro}>
               <p className={styles.text}>€ {price},00</p>
-              <Icon
-                name={isFavorite ? "icon-heart_red" : "icon-heart"}
-                className={`${styles.icon} ${isFavorite ? styles.favorite : ""}`}
-                onClick={handleFavoriteClick}
-              />
+              <Icon name={isFavorite ? "icon-heart_red" : "icon-heart"} className={styles.icon} onClick={toggleFavorite} />
             </div>
           </div>
           <div className={styles.reviews}>
             <div className={styles.star}>
               <Icon name="icon-star" className={styles.iconStar} />
-              <p className={styles.textRew}>{reviewText}</p>
+              <p className={styles.textRew}>{`${rating} (${reviews.length} Reviews)`}</p>
             </div>
             <div className={styles.location}>
               <Icon name="icon-location" className={styles.iconLocation} />
@@ -83,12 +56,8 @@ const CampersListItem = ({ name, price, gallery, rating, location, adults, trans
         <div className={styles.middleDescription}>
           <p className={styles.textSupport}>{description}</p>
           <div className={styles.links}>
-            <button className={styles.link} onClick={() => handleTabClick("features")}>
-              Features
-            </button>
-            <button className={styles.link} onClick={() => handleTabClick("reviews")}>
-              Reviews
-            </button>
+            <button className={styles.link}>Features</button>
+            <button className={styles.link}>Reviews</button>
           </div>
         </div>
         <div className={styles.downDescription}>
@@ -101,7 +70,7 @@ const CampersListItem = ({ name, price, gallery, rating, location, adults, trans
           <button className={styles.btnDescription} type="button">
             <Icon name="icon-gas_station" className={styles.iconDown} /> <span>{engine}</span>
           </button>
-          {kitchen > 0 && (
+          {details.kitchen > 0 && (
             <button className={styles.btnDescription} type="button">
               <Icon name="icon-food" className={styles.iconFood} /> <span>kitchen</span>
             </button>
@@ -109,22 +78,19 @@ const CampersListItem = ({ name, price, gallery, rating, location, adults, trans
           <button className={styles.btnDescription} type="button">
             <Icon name="icon-bed" className={styles.iconBed} />{" "}
             <span>
-              {beds} {beds > 1 ? "beds" : "bed"}
+              {details.beds} {details.beds > 1 ? "beds" : "bed"}
             </span>
           </button>
-          {airConditioner > 0 && (
+          {details.airConditioner > 0 && (
             <button className={styles.btnDescription} type="button">
               <Icon name="icon-windy" className={styles.iconDown} /> <span>AC</span>
             </button>
           )}
         </div>
-        <button className={styles.btn} type="button" onClick={handleShowMore}>
+        <button className={styles.btn} type="button" >
           Show more
         </button>
       </div>
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal} camper={camper} />
-      {activeTab === "features" && <Features />}
-      {activeTab === "reviews" && <Reviews />}
     </li>
   );
 };

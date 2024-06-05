@@ -23,10 +23,18 @@ const FavoritePage = () => {
       <div className={styles.title}>
         <h1>Favorite Page</h1>
       </div>
-      <div className={styles.favoriteList}>{favorites.length > 0 ? favorites.map((name) => <CampersListItem key={name} name={name} />) : <p>No favorite items found.</p>}</div>
+      <ul className={styles.favoritesList}>
+        {favorites.map((camper, index) => (
+          <CampersListItem key={camper._id ? camper._id : index} {...camper} />
+        ))}
+      </ul>
       <Footer className={styles.footer} />
     </div>
   );
 };
 
 export default FavoritePage;
+
+
+
+
