@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import styles from "./formfield.module.css";
@@ -7,24 +7,24 @@ import Icon from "../Icon/Icon";
 const FormField = () => {
   const [startDate, setStartDate] = useState(null);
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const inputRef = useRef(null);
 
   const handleIconClick = () => {
     setIsCalendarOpen(!isCalendarOpen);
+    if (!isCalendarOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
   };
-
-  const CustomInput = ({ value, onClick }) => (
-    <div className={styles.inputGroup}>
-      <input type="text" className={styles.formControl} onClick={onClick} value={value} placeholder="Booking date" readOnly aria-label="Booking date" />
-      <Icon name="icon-calendar" className={styles.icon} onClick={handleIconClick} />
-    </div>
-  );
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     if (form.checkValidity()) {
-      // Handle form submission
       console.log("Form is valid and ready for submission");
+      // Отправка данных формы
+      form.submit();
     } else {
       form.reportValidity();
     }
@@ -38,37 +38,27 @@ const FormField = () => {
       </div>
 
       <div className={styles.formGroup}>
+        <InputWithIcon icon="icon-user" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
+        <InputWithIcon icon="icon-email" placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <InputWithIcon icon="icon-calendar" placeholder="Booking date" onClick={handleIconClick} value={startDate ? startDate.toLocaleDateString() : ""} readOnly ref={inputRef} required />
+        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} onClickOutside={() => setIsCalendarOpen(false)} open={isCalendarOpen} className={styles.calendar} required />
         <div className={styles.inputGroup}>
-          <input type="text" className={styles.formControl} id="name-description" placeholder="Name" aria-label="Name" aria-describedby="name-description" required />
-          <p id="name-description" className={styles.description}>
-            Please enter your full name.
-          </p>
-        </div>
-
-        <div className={styles.inputGroup}>
-          <input type="email" className={styles.formControl} id="email-description" placeholder="Email" aria-label="Email" aria-describedby="email-description" required />
-          <p id="email-description" className={styles.description}>
-            Please enter your email address.
-          </p>
-        </div>
-
-        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} onClickOutside={() => setIsCalendarOpen(false)} open={isCalendarOpen} customInput={<CustomInput />} required />
-        <p id="booking-date-description" className={styles.description}>
-          Please enter the date you wish to book.
-        </p>
-
-        <div className={styles.inputGroup}>
-          <textarea className={styles.formControl} placeholder="Comment" aria-label="Comment" id="comment" aria-describedby="comment-description"></textarea>
-          <p id="comment-description" className={styles.description}>
-            Please enter any additional comments or requests.
-          </p>
+          <textarea className={styles.formControl} placeholder="Comment" aria-label="Comment" id="comment" aria-describedby="comment-description" required />
         </div>
       </div>
+
       <button className={styles.btn} type="submit">
         <span className={styles.span}>Search</span>
       </button>
     </form>
   );
 };
+
+const InputWithIcon = React.forwardRef(({ icon, placeholder, onClick, value, onChange, type }, ref) => (
+  <div className={styles.inputGroup}>
+    <input type={type || "text"} className={styles.formControl} placeholder={placeholder} value={value} onChange={onChange} ref={ref} required />
+    <Icon name={icon} className={styles.icon} onClick={onClick} />
+  </div>
+));
 
 export default FormField;
