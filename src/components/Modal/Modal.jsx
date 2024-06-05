@@ -1,4 +1,3 @@
-// Modal.jsx
 import React, { forwardRef, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import styles from "./modal.module.css";
@@ -8,7 +7,6 @@ import Reviews from "../Reviews/Reviews";
 
 const Modal = forwardRef(({ isOpen, onClose, camper }, ref) => {
   const [activeTab, setActiveTab] = useState(null);
-  // const ref = React.createRef(); // Не нужно это здесь
 
   useEffect(() => {
     const handleEsc = (event) => {
@@ -72,7 +70,7 @@ const Modal = forwardRef(({ isOpen, onClose, camper }, ref) => {
               Reviews
             </button>
           </div>
-          {activeTab === "features" && <Features ref={ref} />} {/* Обертывайте Features в forwardRef */}
+          {activeTab === "features" && <Features ref={ref} />} {/* Обертывай Features в forwardRef */}
           {activeTab === "reviews" && <Reviews ref={ref} reviews={reviews} />}
           <hr size="3px" width="500px" align="left"></hr>
         </div>

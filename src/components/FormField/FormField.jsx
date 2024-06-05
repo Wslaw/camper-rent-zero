@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import styles from "./formfield.module.css";
@@ -9,7 +9,15 @@ const FormField = () => {
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [comment, setComment] = useState("");
+  const [isFormValid, setIsFormValid] = useState(false);
   const inputRef = useRef(null);
+
+  useEffect(() => {
+    // Проверяем валидность формы
+    const formIsValid = name && email && startDate && comment;
+    setIsFormValid(formIsValid);
+  }, [name, email, startDate, comment]);
 
   const handleIconClick = () => {
     setIsCalendarOpen(!isCalendarOpen);
@@ -38,25 +46,76 @@ const FormField = () => {
       </div>
 
       <div className={styles.formGroup}>
-        <InputWithIcon icon="icon-user" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
-        <InputWithIcon icon="icon-email" placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <InputWithIcon icon="icon-calendar" placeholder="Booking date" onClick={handleIconClick} value={startDate ? startDate.toLocaleDateString() : ""} readOnly ref={inputRef} required />
-        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} onClickOutside={() => setIsCalendarOpen(false)} open={isCalendarOpen} className={styles.calendar} required />
+        <InputWithIcon
+          icon="icon-user"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          name="name"
+        />
+        <InputWithIcon
+          icon="icon-email"
+          placeholder="Email"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          name="email"
+        />
+        <InputWithIcon
+          icon="icon-calendar"
+          placeholder="Booking date"
+          onClick={handleIconClick}
+          value={startDate ? startDate.toLocaleDateString() : ""}
+          readOnly
+          ref={inputRef}
+          required
+          name="booking_date"
+        />
+        <DatePicker
+          selected={startDate}
+          onChange={(date) => setStartDate(date)}
+          onClickOutside={() => setIsCalendarOpen(false)}
+          open={isCalendarOpen}
+          className={styles.calendar}
+          required
+        />
         <div className={styles.inputGroup}>
-          <textarea className={styles.formControl} placeholder="Comment" aria-label="Comment" id="comment" aria-describedby="comment-description" required />
+          <textarea
+            className={styles.formControl}
+            placeholder="Comment"
+            aria-label="Comment"
+            id="comment"
+            aria-describedby="comment-description"
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+            name="comment"
+            required
+          />
         </div>
       </div>
 
-      <button className={styles.btn} type="submit">
+      <button className={styles.btn} type="submit" disabled={!isFormValid}>
         <span className={styles.span}>Search</span>
       </button>
     </form>
   );
 };
 
-const InputWithIcon = React.forwardRef(({ icon, placeholder, onClick, value, onChange, type }, ref) => (
+const InputWithIcon = React.forwardRef(({ icon, placeholder, onClick, value, onChange, type, name, required }, ref) => (
   <div className={styles.inputGroup}>
-    <input type={type || "text"} className={styles.formControl} placeholder={placeholder} value={value} onChange={onChange} ref={ref} required />
+    <input
+      type={type || "text"}
+      className={styles.formControl}
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+      ref={ref}
+      name={name}
+      required={required}
+      
+    />
     <Icon name={icon} className={styles.icon} onClick={onClick} />
   </div>
 ));
