@@ -46,53 +46,12 @@ const FormField = () => {
       </div>
 
       <div className={styles.formGroup}>
-        <InputWithIcon
-          icon="icon-user"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-          name="name"
-        />
-        <InputWithIcon
-          icon="icon-email"
-          placeholder="Email"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          name="email"
-        />
-        <InputWithIcon
-          icon="icon-calendar"
-          placeholder="Booking date"
-          onClick={handleIconClick}
-          value={startDate ? startDate.toLocaleDateString() : ""}
-          readOnly
-          ref={inputRef}
-          required
-          name="booking_date"
-        />
-        <DatePicker
-          selected={startDate}
-          onChange={(date) => setStartDate(date)}
-          onClickOutside={() => setIsCalendarOpen(false)}
-          open={isCalendarOpen}
-          className={styles.calendar}
-          required
-        />
+        <InputWithIcon icon="icon-user" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required name="name" />
+        <InputWithIcon icon="icon-email" placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required name="email" />
+        <InputWithIcon icon="icon-calendar" placeholder="Booking date" onClick={handleIconClick} defaultValue={startDate ? startDate.toLocaleDateString() : ""} ref={inputRef} required name="booking_date" />
+        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} onClickOutside={() => setIsCalendarOpen(false)} open={isCalendarOpen} className={styles.calendar} required />
         <div className={styles.inputGroup}>
-          <textarea
-            className={styles.formControl}
-            placeholder="Comment"
-            aria-label="Comment"
-            id="comment"
-            aria-describedby="comment-description"
-            value={comment}
-            onChange={(e) => setComment(e.target.value)}
-            name="comment"
-            required
-          />
+          <textarea className={styles.formControl} placeholder="Comment" aria-label="Comment" id="comment" aria-describedby="comment-description" value={comment} onChange={(e) => setComment(e.target.value)} name="comment" required />
         </div>
       </div>
 
@@ -103,19 +62,9 @@ const FormField = () => {
   );
 };
 
-const InputWithIcon = React.forwardRef(({ icon, placeholder, onClick, value, onChange, type, name, required }, ref) => (
+const InputWithIcon = React.forwardRef(({ icon, placeholder, onClick, value, onChange, type, name, required, defaultValue }, ref) => (
   <div className={styles.inputGroup}>
-    <input
-      type={type || "text"}
-      className={styles.formControl}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-      ref={ref}
-      name={name}
-      required={required}
-      
-    />
+    <input type={type || "text"} className={styles.formControl} placeholder={placeholder} value={value} onChange={onChange} ref={ref} name={name} required={required} defaultValue={defaultValue} />
     <Icon name={icon} className={styles.icon} onClick={onClick} />
   </div>
 ));

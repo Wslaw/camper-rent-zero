@@ -70,7 +70,7 @@ const Modal = forwardRef(({ isOpen, onClose, camper }, ref) => {
               Reviews
             </button>
           </div>
-          {activeTab === "features" && <Features ref={ref} />} {/* Обертывай Features в forwardRef */}
+          {activeTab === "features" && <Features ref={ref} camperId={camper._id} />} 
           {activeTab === "reviews" && <Reviews ref={ref} reviews={reviews} />}
           <hr size="3px" width="500px" align="left"></hr>
         </div>
