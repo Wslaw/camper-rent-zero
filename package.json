@@ -1,7 +1,7 @@
 {
   "name": "camper-rent-zero",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   
   
 "homepage": "https://Wslaw.github.io/camper-rent-zero",
