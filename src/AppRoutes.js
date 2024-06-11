@@ -19,7 +19,7 @@ const AppRoutes = () => {
       <MainMenu /> */}
       <Routes>
         <Route path="/" element={<SharedLayout />}>
-          <Route index element={<HomePage />} />
+          <Route index element={<HomePage /> } />
           <Route path="favorites" element={<FavoritePage />} />
           <Route path="catalog" element={<CatalogPage />} />
           <Route path="*" element={<NotFoundPage />} />
