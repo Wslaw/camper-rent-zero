@@ -114,6 +114,7 @@
 
 .modalDescription {
   font-family: var(--font-family);
+  width: 902px;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -143,4 +144,8 @@
 
 .modalButton:hover {
   color: blue;
+}
+.line{
+  margin: 0 0 44px 0;
+  /* margin-bottom: 44px; */
 }

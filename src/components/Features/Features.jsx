@@ -2,8 +2,8 @@ import React, { forwardRef, useEffect } from "react";
 import campersData from "../../data/campers.json";
 import FormField from "../FormField/FormField";
 
-const Features = forwardRef((props, ref) => {
-  const { camperId } = props;
+const Features = forwardRef(({camperId}, ref) => {
+  // const { camperId } = props;
   const camper = campersData.find((item) => item._id === camperId);
 
   useEffect(() => {
