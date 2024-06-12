@@ -30,12 +30,14 @@ const Modal = forwardRef(({ isOpen, onClose, camper }, ref) => {
     return null;
   }
 
-  const { name, price, gallery, rating, location, description, reviews } = camper;
+  const { id, name, price, gallery, rating, location, description, reviews } = camper;
   const reviewText = `${rating} (${reviews.length} Reviews)`;
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
+  console.log("camper.name =>", camper.name);
+  console.log("camper.id =>", camper.id);
 
   return ReactDOM.createPortal(
     <div className={styles.backdrop} onClick={onClose}>
@@ -71,7 +73,7 @@ const Modal = forwardRef(({ isOpen, onClose, camper }, ref) => {
             </button>
           </div>
           <hr className={styles.line} size="3px" width="902px" align="left"></hr>
-          {activeTab === "features" && <Features ref={ref} camperId={camper._id} />} 
+          {activeTab === "features" && <Features ref={ref} camperId={camper.id} />} 
           {activeTab === "reviews" && <Reviews ref={ref} reviews={reviews} />}
         </div>
       </div>

@@ -3,20 +3,7 @@ import styles from "./campersList.module.css";
 import Icon from "../Icon/Icon";
 import Modal from "../Modal/Modal.jsx";
 
-const CampersListItem = ({
-  name,
-  price,
-  gallery = [],
-  rating = 0,
-  location = "",
-  adults = 0,
-  transmission = "",
-  engine = "",
-  description = "",
-  reviews = [],
-  details = { kitchen: 0, beds: 0, airConditioner: 0 },
-  removeFromFavorites = null, 
-}) => {
+const CampersListItem = ({ id, name, price, gallery = [], rating = 0, location = "", adults = 0, transmission = "", engine = "", description = "", reviews = [], details = { kitchen: 0, beds: 0, airConditioner: 0 }, removeFromFavorites = null }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -33,10 +20,10 @@ const CampersListItem = ({
     if (isFavorite) {
       updatedFavorites = existingFavorites.filter((camper) => camper.name !== name);
       if (removeFromFavorites) {
-        removeFromFavorites(name); 
+        removeFromFavorites(name);
       }
     } else {
-      const camper = { name, price, gallery, rating, location, adults, transmission, engine, description, reviews, details };
+      const camper = { id, name, price, gallery, rating, location, adults, transmission, engine, description, reviews, details };
       updatedFavorites = [...existingFavorites, camper];
     }
 
@@ -53,6 +40,7 @@ const CampersListItem = ({
   };
 
   const camper = {
+    id,
     name,
     price,
     gallery,
@@ -60,7 +48,10 @@ const CampersListItem = ({
     location,
     description,
     reviews,
+    details, // Додаємо details до об'єкта camper
   };
+  console.log("CAMPER=>", camper)
+    console.log("id =>", camper.id);
 
   return (
     <li className={styles.campersListItem}>

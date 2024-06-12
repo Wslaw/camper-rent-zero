@@ -9,6 +9,7 @@ const CampersList = ({ campers, removeFromFavorites }) => {
         {campers.map((camper) => (
           <CampersListItem
             key={camper.name}
+            id={camper._id}
             name={camper.name}
             price={camper.price}
             gallery={camper.gallery}
