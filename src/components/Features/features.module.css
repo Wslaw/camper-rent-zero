@@ -1,10 +1,9 @@
-.wrap{
+/* .wrap{
 background-color: rgb(192, 190, 193);
 display: flex;
-/* flex-direction: row; */
+flex-direction: row;
 gap: 24px;
-}
-
+} */
 .features {
   margin-top: 20px;
   padding: 10px;
@@ -12,11 +11,20 @@ gap: 24px;
   border-radius: 5px;
   width: 430px;
   color: rgb(41, 39, 167);
-display: flex;
-flex-direction: column;
-}
-
+  display: flex;
+  flex-direction: row;
+  }
+  .details{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    width: 430px;
+  }
+  
 .featuresList {
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: red;
   list-style: none;
   padding: 0;
 }
@@ -24,13 +32,17 @@ flex-direction: column;
 .featureIcon{
   width: 20px;
   height: 20px;
+stroke-width: 1.50px;
+stroke: var(--main);  
+/* fill: transparent; */
 }
 
 .featureItem {
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* flex-wrap: wrap; */
-  /* justify-content: space-between; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+align-items: center;
   margin-bottom: 8px;
   border-radius: 100px;
 padding: 12px 18px;
@@ -44,6 +56,8 @@ background-color: aquamarine;
 }
 
 .vehicleDetails {
+  display: flex;
+  flex-direction: column;
   margin-top: 20px;
 }
 

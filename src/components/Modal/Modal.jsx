@@ -30,7 +30,7 @@ const Modal = forwardRef(({ isOpen, onClose, camper }, ref) => {
     return null;
   }
 
-  const { id, name, price, gallery, rating, location, description, reviews } = camper;
+  const {  name, price, gallery, rating, location, description, reviews } = camper;
   const reviewText = `${rating} (${reviews.length} Reviews)`;
 
   const handleTabClick = (tab) => {

@@ -101,41 +101,43 @@ const Features = forwardRef((props, ref) => {
 
   return (
     <div className={styles.features} ref={ref}>
-      <ul className={styles.featuresList}>
-        {features.map((feature) => (
-          <li key={feature.key} className={styles.featureItem}>
-            <Icon name={feature.icon} className={styles.featureIcon} />
-            <div className={styles.featureText}>
-              <span className={styles.featureLabel}>{feature.label}</span>
-              <span className={styles.featureValue}>{feature.format ? feature.format(camper.details[feature.key]) : camper.details[feature.key]}</span>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <div className={styles.vehicleDetails}>
-        <h3 className={styles.detailsTitle}>Vehicle Details</h3>
-        <ul className={styles.detailsList}>
-          <li>
-            <span>Form:</span> <span>{camper.form}</span>
-          </li>
-          <li>
-            <span>Length:</span> <span>{camper.length}</span>
-          </li>
-          <li>
-            <span>Width:</span> <span>{camper.width}</span>
-          </li>
-          <li>
-            <span>Height:</span> <span>{camper.height}</span>
-          </li>
-          <li>
-            <span>Tank:</span> <span>{camper.tank}</span>
-          </li>
-          <li>
-            <span>Consumption:</span> <span>{camper.consumption}</span>
-          </li>
+      <div className={styles.details}>
+        <ul className={styles.featuresList}>
+          {features.map((feature) => (
+            <li key={feature.key} className={styles.featureItem}>
+              <Icon name={feature.icon} className={styles.featureIcon} />
+              <div className={styles.featureText}>
+                <span className={styles.featureLabel}>{feature.label}</span>
+                <span className={styles.featureValue}>{feature.format ? feature.format(camper.details[feature.key]) : camper.details[feature.key]}</span>
+              </div>
+            </li>
+          ))}
         </ul>
+        <div className={styles.vehicleDetails}>
+          <h3 className={styles.detailsTitle}>Vehicle Details</h3>
+          <ul className={styles.detailsList}>
+            <li>
+              <span>Form:</span> <span>{camper.form}</span>
+            </li>
+            <li>
+              <span>Length:</span> <span>{camper.length}</span>
+            </li>
+            <li>
+              <span>Width:</span> <span>{camper.width}</span>
+            </li>
+            <li>
+              <span>Height:</span> <span>{camper.height}</span>
+            </li>
+            <li>
+              <span>Tank:</span> <span>{camper.tank}</span>
+            </li>
+            <li>
+              <span>Consumption:</span> <span>{camper.consumption}</span>
+            </li>
+          </ul>
+        </div>
       </div>
-      <FormField />
+      {/* <FormField /> */}
     </div>
   );
 });
