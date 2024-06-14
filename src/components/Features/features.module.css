@@ -25,8 +25,7 @@ gap: 24px;
   flex-direction: row;
   flex-wrap: wrap;
   color: red;
-  list-style: none;
-  padding: 0;
+  background-color: blue;
 }
 
 .featureIcon{
@@ -39,14 +38,16 @@ stroke: var(--main);
 
 .featureItem {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 8px;
   flex-wrap: wrap;
   justify-content: center;
 align-items: center;
   margin-bottom: 8px;
   border-radius: 100px;
 padding: 12px 18px;
-width: 126px;
+/* width: 126px; */
+width: fit-content;
 height: 44px;
 background-color: aquamarine;
 }

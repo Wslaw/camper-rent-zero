@@ -71,7 +71,7 @@
 
 import React, { forwardRef, useEffect } from "react";
 import campersData from "../../data/campers.json";
-import FormField from "../FormField/FormField";
+// import FormField from "../FormField/FormField";
 import styles from "./features.module.css";
 import Icon from "../Icon/Icon";
 
@@ -90,7 +90,7 @@ const Features = forwardRef((props, ref) => {
   const features = [
     { key: "adults", label: "Adults", icon: "icon-people" },
     { key: "transmission", label: "Transmission", icon: "icon-transmission" },
-    { key: "airConditioner", label: "Air Conditioner", icon: "icon-windy", format: (value) => (value >= 1 ? "AC" : "") },
+    { key: "airConditioner", label: "AC", icon: "icon-windy", format: (value) => (value >= 1 ? "AC" : "") },
     { key: "engine", label: "Engine", icon: "icon-gas_station" },
     { key: "kitchen", label: "Kitchen", icon: "icon-food" },
     { key: "beds", label: "Beds", icon: "icon-bed" },
