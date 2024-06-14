@@ -48,10 +48,9 @@ const CampersListItem = ({ id, name, price, gallery = [], rating = 0, location =
     location,
     description,
     reviews,
-    details, // Додаємо details до об'єкта camper
+    details, 
   };
-  console.log("CAMPER=>", camper)
-    console.log("id =>", camper.id);
+  
 
   return (
     <li className={styles.campersListItem}>

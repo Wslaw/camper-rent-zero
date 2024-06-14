@@ -36,8 +36,7 @@ const Modal = forwardRef(({ isOpen, onClose, camper }, ref) => {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
-  console.log("camper.name =>", camper.name);
-  console.log("camper.id =>", camper.id);
+
 
   return ReactDOM.createPortal(
     <div className={styles.backdrop} onClick={onClose}>

@@ -5,15 +5,15 @@ flex-direction: row;
 gap: 24px;
 } */
 .features {
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 430px;
-  color: rgb(41, 39, 167);
   display: flex;
   flex-direction: row;
+  gap: 24px;
+  /* justify-content: space-evenly; */
+  /* padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px; */
   }
+
   .details{
     display: flex;
     flex-direction: column;
@@ -21,20 +21,14 @@ gap: 24px;
     width: 430px;
   }
   
-.featuresList {
+.featuresList {display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  color: red;
-  background-color: blue;
+  gap: 8px;
+  /* color: red; */
+  /* background-color: blue; */
 }
 
-.featureIcon{
-  width: 20px;
-  height: 20px;
-stroke-width: 1.50px;
-stroke: var(--main);  
-/* fill: transparent; */
-}
 
 .featureItem {
   display: flex;
@@ -42,16 +36,28 @@ stroke: var(--main);
   gap: 8px;
   flex-wrap: wrap;
   justify-content: center;
-align-items: center;
+  align-items: center;
   margin-bottom: 8px;
   border-radius: 100px;
-padding: 12px 18px;
-/* width: 126px; */
-width: fit-content;
-height: 44px;
-background-color: aquamarine;
-}
+  padding: 12px 18px;
+  /* width: 126px; */
+  width: fit-content;
+  max-height: 44px;
+background: var(--block-features);
+mix-blend-mode: multiply;  }
 
+
+    .featureIcon{
+      width: 20px;
+      height: 20px;
+    stroke-width: 1.50px;
+    stroke: var(--main);  
+    fill: transparent;
+    }
+
+    .line{
+margin: 24px 0;
+    }
 .featureLabel {
   font-weight: bold;
 }
@@ -59,7 +65,8 @@ background-color: aquamarine;
 .vehicleDetails {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 44px;
+
 }
 
 .detailsTitle {
@@ -68,14 +75,21 @@ background-color: aquamarine;
 }
 
 .detailsList {
-  list-style: none;
-  padding: 0;
+display: flex;
+flex-direction: column;
+gap: 14px;
 }
 
 .detailsList li {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 6px;
 }
 
 .detailsList span {
   margin-left: 10px;
+}
+
+.form{
+  display: flex;
 }
