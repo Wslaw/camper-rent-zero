@@ -1,6 +1,6 @@
 .formfield {
   width: 448px;
-  height: 532px;
+  height: auto;
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 10px;
   padding: 24px;
@@ -8,7 +8,6 @@
 
 .wraptext {
   width: 400px;
-  height: 56px;
   margin-bottom: 24px;
 }
 
@@ -30,9 +29,7 @@
 
 .formGroup {
   max-width: 400px;
-  max-height: 324px;
   margin-bottom: 24px;
-  
 }
 
 .inputGroup {
@@ -44,12 +41,9 @@
   padding: 18px;
   max-width: 400px;
   background: var(--inputs);
-  
 }
 
-
 .formControl {
- 
   width: 320px;
   flex-grow: 1;
   background: var(--inputs);
@@ -76,31 +70,6 @@
   fill: transparent;
 }
 
-.btn {
-  border: none;
-  border-radius: 200px;
-  padding: 16px 60px;
-  width: 160px;
-  height: 56px;
-  background: var(--button);
-}
-
-.span {
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: -0.01em;
-  color: #fff;
-}
-
-.btn:hover {
-  background: #d84343;
-}
-
-.description {
-  display: none;
-}
 .calendar {
   position: absolute;
   top: 100%;
@@ -111,7 +80,6 @@
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(16, 24, 40, 0.1);
   padding: 8px;
-  display: none;
 }
 
 .react-datepicker {
@@ -119,7 +87,6 @@
   font-weight: 400;
   font-size: 16px;
   color: rgba(16, 24, 40, 0.6);
-  display: none;
 }
 
 .react-datepicker__header {
@@ -182,11 +149,31 @@
 }
 
 .react-datepicker-wrapper {
-  display: none !important;
-
-}
-.react-datepicker__current-month {
-  color: red !important; 
+  width: 100%;
 }
 
+.btn {
+  border: none;
+  border-radius: 200px;
+  padding: 16px 60px;
+  width: 160px;
+  height: 56px;
+  background: var(--button);
+}
 
+.span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.btn:hover {
+  background: #d84343;
+}
+
+.description {
+  display: none;
+}

@@ -58,9 +58,14 @@ mix-blend-mode: multiply;  }
     .line{
 margin: 24px 0;
     }
+    .featureValue,
 .featureLabel {
-  font-weight: bold;
-}
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+line-height: 125%;
+text-align: center;
+color: var(--main);}
 
 .vehicleDetails {
   display: flex;
