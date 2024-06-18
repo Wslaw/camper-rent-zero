@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/campers-rent-zero/static/css/main.4b5eba6b.css",
-    "main.js": "/campers-rent-zero/static/js/main.d384d91a.js",
+    "main.css": "/campers-rent-zero/static/css/main.5b06d3e5.css",
+    "main.js": "/campers-rent-zero/static/js/main.b8e650e8.js",
     "static/media/pngwing.com (10).png": "/campers-rent-zero/static/media/pngwing.com (10).eccf28c17da54e2e224f.png",
     "static/media/Inter-Medium.ttf": "/campers-rent-zero/static/media/Inter-Medium.7682fdab91479338a4d5.ttf",
     "static/media/Inter-SemiBold.ttf": "/campers-rent-zero/static/media/Inter-SemiBold.814c22bad710b7ff6e33.ttf",
@@ -14,13 +14,13 @@
     "static/media/Inter-Regular.woff2": "/campers-rent-zero/static/media/Inter-Regular.bd097ceff83f90802a12.woff2",
     "static/media/pngwing9.jpg": "/campers-rent-zero/static/media/pngwing9.5fac590ba04f9942865c.jpg",
     "static/media/camp9.jpg": "/campers-rent-zero/static/media/camp9.494d6c43930b3a6f7920.jpg",
-    "static/media/sprite.svg": "/campers-rent-zero/static/media/sprite.b5e2423667bd8c4e865e42f6057a6162.svg",
+    "static/media/sprite.svg": "/campers-rent-zero/static/media/sprite.5d23a40f8604a0aa180787cf0d119f94.svg",
     "index.html": "/campers-rent-zero/index.html",
-    "main.4b5eba6b.css.map": "/campers-rent-zero/static/css/main.4b5eba6b.css.map",
-    "main.d384d91a.js.map": "/campers-rent-zero/static/js/main.d384d91a.js.map"
+    "main.5b06d3e5.css.map": "/campers-rent-zero/static/css/main.5b06d3e5.css.map",
+    "main.b8e650e8.js.map": "/campers-rent-zero/static/js/main.b8e650e8.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b5eba6b.css",
-    "static/js/main.d384d91a.js"
+    "static/css/main.5b06d3e5.css",
+    "static/js/main.b8e650e8.js"
   ]
 }
